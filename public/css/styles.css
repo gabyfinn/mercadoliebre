@@ -17,11 +17,11 @@ p {
     font-size: 12px;
 }
 
-div.top-header {
+/* div.top-header {
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
-}
+} */
 
 header div.top-header p {
     width: 100%;
@@ -318,6 +318,17 @@ nav ul {
     }
 }
 
+@media (min-width: 576px) {
+
+    /* Tablet */
+    div.top-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
 @media (min-width: 769px) {
     main section div.products article {
         width: 22%;
@@ -336,10 +347,6 @@ nav ul {
 
 }
 
-@media (min-width: 576px) {
-    /* Tablet */
-
-}
 
 @media (min-width: 992px) {
     /* Desktop */
