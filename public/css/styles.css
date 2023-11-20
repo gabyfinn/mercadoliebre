@@ -29,8 +29,17 @@ header div.top-header p {
     margin-top: 10px;
 }
 
+.main-nav-bar {
+    display: none;
+}
+
 header {
     background-color: #EAC926;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header div.logo,
@@ -78,19 +87,8 @@ header .form .submit {
     width: 10%;
 }
 
-div.burger-menu {
-    /* text-align: center;
-    width: 100%;
-    margin: 0 auto; */
-    text-align: center;
-    display: flex;
-    /* Hace que el contenido del div sea un flexbox */
-    justify-content: center;
-    /* Centra horizontalmente el contenido */
 
-}
-
-div.burger-menu i {
+/* div.burger-menu i {
     background-color: #0044AA;
     border-radius: 5px;
     color: #FFF;
@@ -100,6 +98,20 @@ div.burger-menu i {
     padding: 10px;
     width: 40px;
     display: block;
+} */
+
+.burger-menu {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #03264c;
+    color: white;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 div.last-visit,
@@ -189,6 +201,92 @@ main section h3 {
     margin: 20px 0px;
 }
 
+.create-form {
+    padding: 5px 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.control-form {
+    margin-bottom: 15px;
+}
+
+.control-form input .etiqueta {
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.box {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.box input:hover,
+.box input:focus,
+.search-input input:focus,
+.search-input input:hover {
+    outline: none;
+}
+
+.control {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.control-form input.control:hover {
+    outline: none;
+}
+
+.button-form {
+    background-color: #1259c3;
+    border: none;
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-reg {
+    width: 100%;
+    background-color: #1259c3;
+    border: none;
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-reg:hover {
+    background-color: #0022AA;
+}
+
+input:invalid {
+    background-color: rgba(218, 170, 170, 0.815);
+}
+
+input:hover,
+input:focus {
+    outline: #eac926 2px solid;
+}
+
+span {
+    color: red;
+    margin-top: 5px;
+    display: block;
+}
+
+.copy {
+    text-align: center;
+    font-weight: 450;
+    padding: 2px;
+}
+
 footer div i {
     width: 30px;
     height: 30px;
@@ -205,6 +303,48 @@ footer div i {
     top: -15px; */
 }
 
+.nav-bar {
+    width: 65%;
+    padding: 5px;
+}
+
+.search-input {
+    border-radius: 2px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.box {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.box input:hover,
+.box input:focus,
+.search-input input:focus,
+.search-input input:hover {
+    outline: none;
+}
+
+.search-input input {
+    width: 100%;
+    border: none;
+    padding: 1px 10px 1px 5px;
+    border-right: #ebebeb solid 1px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #666;
+    max-width: 500px;
+    text-align: left;
+    margin: auto;
+    padding: 15px 15px 5px 15px;
+}
+
 article div.main-article {
     width: 100%;
     display: flex;
@@ -219,6 +359,10 @@ article div.main-article {
     rotate: -90deg;
     transition: rotate 2s;
 } */
+
+.main-nav-bar {
+    display: none;
+}
 
 
 
@@ -265,15 +409,40 @@ nav ul {
     display: none;
 }
 
+.header-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    border-style: none;
+}
+
+.logo {
+    width: 50%;
+    padding: 5px;
+    max-width: 173px;
+}
+
+.main-header-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
 @media (min-width: 361px) {
     main section article .description {
         display: block;
     }
 
-    div.burger-menu i {
+    /* div.burger-menu i {
         display: none;
-        /* Muestra el ícono del menú hamburguesa */
-    }
+         Muestra el ícono del menú hamburguesa 
+    } */
 
     nav ul {
         display: block;
@@ -325,6 +494,53 @@ nav ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        /*  position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 100; */
+    }
+
+    .header-search-bar {
+        width: 65%;
+    }
+
+    .copy {
+        text-align: right;
+    }
+
+    .logo {
+        max-width: 165px;
+    }
+
+    .main-header-top-bar,
+    .main-nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-header-mobile {
+        width: 65%;
+    }
+
+    .main-header-top-bar,
+    .main-nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-nav-bar ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-nav-bar li {
+        margin-right: 5px;
+    }
+
+    .burger-menu {
+        display: none;
     }
 
 }
@@ -349,11 +565,55 @@ nav ul {
 
 
 @media (min-width: 992px) {
-    /* Desktop */
 
+    /* Desktop */
+    .header-search-bar {
+        width: 75%;
+    }
+
+    .logo {
+        max-width: 253px;
+    }
+
+    .main-header-top-bar,
+    .main-nav-bar {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-header-mobile {
+        width: 75%;
+    }
+
+    .main-nav-bar li {
+        margin-right: 6px;
+    }
+
+    .copy {
+        font-size: 12px;
+        margin-right: 5px;
+    }
 }
 
 @media (min-width: 1200px) {
+
     /* Desktop XL*/
+    .main-header-top-bar,
+    .main-nav-bar {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-nav-bar li {
+        margin-right: 10px;
+    }
+
+    .main-nav-bar a {
+        font-size: 14px;
+    }
+
+    .copy {
+        font-size: 14px;
+    }
 
 }
